@@ -1,0 +1,21 @@
+{% extends "learning_foreign_languages/base.html" %}
+
+{%block content %}
+
+  <p>Languages: {{ language }}</p>
+
+    <p>Vocabulary:</p>
+  <ul>
+      {% for vocabulary in Vocabularies %}
+        <li>
+            <p>{{ vocabulary.date_added|date:'M d, Y H:i' }}</p>
+            <p>{{vocabulary.text|linebreaks }}</p>
+        </li>
+      {%empty %}
+        <li>
+            No languages have been added yet.
+        </li>
+      {% endfor %}
+  </ul>
+
+{% endblock content %}
