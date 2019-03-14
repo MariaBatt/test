@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('learning_foreign_languages')),
+    path('', include('learning_foreign_languages.urls')),
 ]
